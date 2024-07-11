@@ -1,5 +1,7 @@
+import { City } from '../../const';
+
 type CitiesTabsProps = {
-  cities: string[];
+  cities: typeof City;
 };
 
 const CitiesTabItem = ({ city }: {city: string}):JSX.Element => (
@@ -14,7 +16,7 @@ const CitiesTabs = ({ cities }: CitiesTabsProps):JSX.Element => (
   <div className="tabs">
     <section className="locations container">
       <ul className="locations__list tabs__list">
-        {cities.map((city) => (
+        {Object.values(cities).map((city) => (
           <CitiesTabItem key={city} city={city} />
         ))}
       </ul>

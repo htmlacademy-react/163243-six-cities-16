@@ -1,3 +1,5 @@
+import { capitalizeLetter } from '../../utils';
+
 type PlaceCardProps = {
     id: string;
     title: string;
@@ -56,7 +58,7 @@ const PlaceCard = ({ placeCard }: { placeCard: PlaceCardProps }):JSX.Element => 
       <h2 className="place-card__name">
         <a href="#">{ placeCard.title }</a>
       </h2>
-      <p className="place-card__type">{ placeCard.type.charAt(0).toUpperCase() + placeCard.type.slice(1) }</p>
+      <p className="place-card__type">{ capitalizeLetter(placeCard.type) }</p>
     </div>
   </article>
 );
