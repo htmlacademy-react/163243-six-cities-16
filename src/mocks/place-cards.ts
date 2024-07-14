@@ -1,8 +1,11 @@
-const placeCards = [
+import { PlaceCard, Place } from '../types';
+
+const placeCards: PlaceCard[] = [
+
   {
     'id': '6779022c-ac26-4554-ac2e-227dd6349161',
     'title': 'House in countryside',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 495,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -25,7 +28,7 @@ const placeCards = [
   {
     'id': '8616b887-ac5f-41ae-a1d2-6ef5a5aa7e13',
     'title': 'Canal View Prinsengracht',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 410,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/10.jpg',
     'city': {
@@ -48,7 +51,7 @@ const placeCards = [
   {
     'id': 'e01c8700-5694-4640-80e6-3ace9e158cf0',
     'title': 'House in countryside',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 535,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/12.jpg',
     'city': {
@@ -71,7 +74,7 @@ const placeCards = [
   {
     'id': '9abaa506-5e9e-493f-9a35-23c537646919',
     'title': 'The house among olive ',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 438,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/13.jpg',
     'city': {
@@ -94,7 +97,7 @@ const placeCards = [
   {
     'id': '4890374a-9465-47a5-9f3d-bcdd5f861cc2',
     'title': 'Canal View Prinsengracht',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 258,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -117,7 +120,7 @@ const placeCards = [
   {
     'id': '7c941d2d-fc4c-4325-ae80-6fa0db8525d2',
     'title': 'Canal View Prinsengracht',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 166,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -140,7 +143,7 @@ const placeCards = [
   {
     'id': '1fd25b8d-e0fe-452d-a78c-24e2427ae41a',
     'title': 'Tile House',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 161,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/7.jpg',
     'city': {
@@ -163,7 +166,7 @@ const placeCards = [
   {
     'id': 'a64b6904-6879-455a-9ca8-2e9e0eec168a',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 109,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -186,7 +189,7 @@ const placeCards = [
   {
     'id': '26f61f29-9a31-43b5-8a65-a1275fadd67a',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 126,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -209,7 +212,7 @@ const placeCards = [
   {
     'id': '05e54abb-6df4-4be0-a40c-3192301f830f',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 259,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -232,7 +235,7 @@ const placeCards = [
   {
     'id': '3c781387-a7de-4248-8ed9-f0d4b106be10',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 277,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/11.jpg',
     'city': {
@@ -255,7 +258,7 @@ const placeCards = [
   {
     'id': '7edecfb3-5245-490b-af5e-05437374dd63',
     'title': 'Loft Studio in the Central Area',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 289,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/10.jpg',
     'city': {
@@ -278,7 +281,7 @@ const placeCards = [
   {
     'id': '877a05e5-a5ba-49d7-b38d-cd64d431294c',
     'title': 'Wood and stone place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 255,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -301,7 +304,7 @@ const placeCards = [
   {
     'id': 'a25d6b9b-451b-4b06-a7bf-7aad81b6cfe6',
     'title': 'Wood and stone place',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 443,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/13.jpg',
     'city': {
@@ -324,7 +327,7 @@ const placeCards = [
   {
     'id': 'cd5397b0-5061-4607-ab6d-2734d6663943',
     'title': 'Wood and stone place',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 346,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/16.jpg',
     'city': {
@@ -347,7 +350,7 @@ const placeCards = [
   {
     'id': '8bade9a6-a5b6-4e82-8f2c-f82fcc33f042',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 988,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -370,7 +373,7 @@ const placeCards = [
   {
     'id': 'f3275d30-0863-481d-94ed-d31e7f165a4b',
     'title': 'House in countryside',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 256,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -393,7 +396,7 @@ const placeCards = [
   {
     'id': '941cf58c-e73f-47dc-b4df-3fa1fb2b11c6',
     'title': 'The Joshua Tree House',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 635,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -416,7 +419,7 @@ const placeCards = [
   {
     'id': 'bcf2f2a7-e3fb-4485-8777-e60c94365848',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 272,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/1.jpg',
     'city': {
@@ -439,7 +442,7 @@ const placeCards = [
   {
     'id': '3fbc98e6-6c9e-4b0c-9c0a-ba8cd5a0eb37',
     'title': 'Loft Studio in the Central Area',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 916,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/10.jpg',
     'city': {
@@ -462,7 +465,7 @@ const placeCards = [
   {
     'id': '377a1bd7-e3a9-4e70-a8d2-2e4ff5752fec',
     'title': 'Perfectly located Castro',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 263,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/3.jpg',
     'city': {
@@ -485,7 +488,7 @@ const placeCards = [
   {
     'id': 'e20dc4b2-48ac-4705-b062-c68d883d8ab0',
     'title': 'House in countryside',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 241,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -508,7 +511,7 @@ const placeCards = [
   {
     'id': '1d24b889-e2c9-47a0-9877-33650a9aa481',
     'title': 'House in countryside',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 341,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/3.jpg',
     'city': {
@@ -531,7 +534,7 @@ const placeCards = [
   {
     'id': 'df0ba350-567c-4b31-9ad8-93e9c4e8645f',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 144,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -554,7 +557,7 @@ const placeCards = [
   {
     'id': 'd12129f0-6936-4209-8c47-00f07f387a82',
     'title': 'House in countryside',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 130,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -577,7 +580,7 @@ const placeCards = [
   {
     'id': 'c488d99e-f474-4334-afc5-7f7f7973f315',
     'title': 'Canal View Prinsengracht',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 227,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -600,7 +603,7 @@ const placeCards = [
   {
     'id': '6d7d21ec-d168-4fbb-b497-ca55dd01b052',
     'title': 'Waterfront with extraordinary view',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 473,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/13.jpg',
     'city': {
@@ -623,7 +626,7 @@ const placeCards = [
   {
     'id': '747d4d86-ab53-4810-bed2-221aadca2670',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 207,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/6.jpg',
     'city': {
@@ -646,7 +649,7 @@ const placeCards = [
   {
     'id': 'a668e268-8f58-483f-90b6-d3bfde3f7fe4',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 447,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/16.jpg',
     'city': {
@@ -669,7 +672,7 @@ const placeCards = [
   {
     'id': '0f969afe-f532-45ab-bb73-d9ec026949f6',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 118,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/3.jpg',
     'city': {
@@ -692,7 +695,7 @@ const placeCards = [
   {
     'id': '18d23ea2-9460-41be-981b-1f6275a49e65',
     'title': 'The house among olive ',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 912,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -715,7 +718,7 @@ const placeCards = [
   {
     'id': '77e7bfc6-eb4d-440e-a3a2-1c4afa6da1b7',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 128,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -738,7 +741,7 @@ const placeCards = [
   {
     'id': '1375fada-d0ce-485d-acfb-ce19286edef0',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 259,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -761,7 +764,7 @@ const placeCards = [
   {
     'id': '3491973f-99ae-4054-9350-e9f5669402b2',
     'title': 'Loft Studio in the Central Area',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 215,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -784,7 +787,7 @@ const placeCards = [
   {
     'id': 'c9c50516-804a-4aaf-9b20-eab076f7c622',
     'title': 'Canal View Prinsengracht',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 104,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -807,7 +810,7 @@ const placeCards = [
   {
     'id': 'dd3393df-63e9-4061-96f5-1928b3023cc9',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 213,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -830,7 +833,7 @@ const placeCards = [
   {
     'id': '36a14300-fec8-4145-9b85-874bf8f2f052',
     'title': 'Waterfront with extraordinary view',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 586,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -853,7 +856,7 @@ const placeCards = [
   {
     'id': '6f7329c7-931a-48a1-b333-22e2b1ab26f3',
     'title': 'Tile House',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 293,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -876,7 +879,7 @@ const placeCards = [
   {
     'id': '9fd8fcbb-8ba0-4e59-b1b4-cc6dad10baf5',
     'title': 'Wood and stone place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 296,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/5.jpg',
     'city': {
@@ -899,7 +902,7 @@ const placeCards = [
   {
     'id': '145f5598-88e0-43ed-bb11-2ab0d7d4c751',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 310,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/7.jpg',
     'city': {
@@ -922,7 +925,7 @@ const placeCards = [
   {
     'id': '953eabc2-9c20-4b49-8105-ffe79e889096',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 445,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -945,7 +948,7 @@ const placeCards = [
   {
     'id': '0a9f7c6a-c195-4b5b-9586-01588f895826',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 261,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/1.jpg',
     'city': {
@@ -968,7 +971,7 @@ const placeCards = [
   {
     'id': '0e43607a-4e4b-4949-9166-6c7ea89dcbf7',
     'title': 'Loft Studio in the Central Area',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 195,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -991,7 +994,7 @@ const placeCards = [
   {
     'id': '416bf98a-a00a-4fb5-8b42-4101d4ae07c4',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 183,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -1014,7 +1017,7 @@ const placeCards = [
   {
     'id': 'b348e55f-6338-4e33-9f3a-3f2cb48fcf62',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 341,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/10.jpg',
     'city': {
@@ -1037,7 +1040,7 @@ const placeCards = [
   {
     'id': '4f632f2a-0ae4-4592-ab3e-ed705930503b',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 884,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -1060,7 +1063,7 @@ const placeCards = [
   {
     'id': '666d9a78-6c73-414f-b6ff-1fa0be37c84f',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 894,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -1083,7 +1086,7 @@ const placeCards = [
   {
     'id': '08ca94ea-ea63-49eb-bfbd-de1119d5806d',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 181,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -1106,7 +1109,7 @@ const placeCards = [
   {
     'id': '93f7ce4b-e7df-4eae-9de0-dcd5f6703771',
     'title': 'Waterfront with extraordinary view',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 256,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -1129,7 +1132,7 @@ const placeCards = [
   {
     'id': '64b138f0-2379-4bc4-9e93-7894648af4c2',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 178,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -1152,7 +1155,7 @@ const placeCards = [
   {
     'id': 'fe5e98b9-bdc3-4391-aa79-e36c2350763c',
     'title': 'House in countryside',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 137,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -1175,7 +1178,7 @@ const placeCards = [
   {
     'id': '3c9114c9-b84e-4f0e-aecf-86382f6ba759',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 454,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/12.jpg',
     'city': {
@@ -1198,7 +1201,7 @@ const placeCards = [
   {
     'id': 'af9e822e-fe49-4da6-84db-6764791d4ad1',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 163,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -1221,7 +1224,7 @@ const placeCards = [
   {
     'id': 'd4943655-0417-4cfa-becc-d5d3711f3dd4',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 267,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -1244,7 +1247,7 @@ const placeCards = [
   {
     'id': '105b6636-d2b1-454a-9a9e-81a8ac13a5ea',
     'title': 'House in countryside',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 247,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -1267,7 +1270,7 @@ const placeCards = [
   {
     'id': 'dc0cc959-5003-425c-b4b2-0aac79045bf3',
     'title': 'Perfectly located Castro',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 272,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -1290,7 +1293,7 @@ const placeCards = [
   {
     'id': '1bef96d2-94a4-4da2-a737-031c94f7dbf1',
     'title': 'Wood and stone place',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 979,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -1313,7 +1316,7 @@ const placeCards = [
   {
     'id': '759c05a4-87a2-499c-b390-582b33cb1bd8',
     'title': 'Loft Studio in the Central Area',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 718,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/20.jpg',
     'city': {
@@ -1336,7 +1339,7 @@ const placeCards = [
   {
     'id': 'e762d166-8708-47ac-bdb1-90e54ee82062',
     'title': 'The Joshua Tree House',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 272,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -1359,7 +1362,7 @@ const placeCards = [
   {
     'id': '955da23b-e625-46f1-9534-6cc3ed1f345b',
     'title': 'Tile House',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 177,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/12.jpg',
     'city': {
@@ -1382,7 +1385,7 @@ const placeCards = [
   {
     'id': '3aa2c29f-0275-4adf-90e4-755fa48e9b2f',
     'title': 'Loft Studio in the Central Area',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 270,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/11.jpg',
     'city': {
@@ -1405,7 +1408,7 @@ const placeCards = [
   {
     'id': '2c0cb449-c13a-46d9-a18f-39b288de7a4c',
     'title': 'Tile House',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 369,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/6.jpg',
     'city': {
@@ -1428,7 +1431,7 @@ const placeCards = [
   {
     'id': '24737995-9b3a-4841-84b2-747a9217dbc2',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 241,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/1.jpg',
     'city': {
@@ -1451,7 +1454,7 @@ const placeCards = [
   {
     'id': 'b63c5db9-b944-43f0-9c24-4b1c7578ef62',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 109,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/1.jpg',
     'city': {
@@ -1474,7 +1477,7 @@ const placeCards = [
   {
     'id': 'a6a84c7b-1df8-42d0-9936-3fd1a18c68af',
     'title': 'Tile House',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 131,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -1497,7 +1500,7 @@ const placeCards = [
   {
     'id': '70957ee2-b024-494f-a644-825380ed86b7',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 157,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -1520,7 +1523,7 @@ const placeCards = [
   {
     'id': '812afaeb-6e81-43e7-94ab-fa3b482b0a4d',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 306,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/16.jpg',
     'city': {
@@ -1543,7 +1546,7 @@ const placeCards = [
   {
     'id': 'e26343e8-16b1-49c2-8593-a3889ecb9b8e',
     'title': 'Wood and stone place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 182,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/16.jpg',
     'city': {
@@ -1566,7 +1569,7 @@ const placeCards = [
   {
     'id': '3451e37d-9a64-4d90-ae29-c59c12bda44a',
     'title': 'Tile House',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 402,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/1.jpg',
     'city': {
@@ -1589,7 +1592,7 @@ const placeCards = [
   {
     'id': '09e8bd55-9cff-469f-9177-0fa12638ff2c',
     'title': 'Wood and stone place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 272,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/20.jpg',
     'city': {
@@ -1612,7 +1615,7 @@ const placeCards = [
   {
     'id': '06aa5e07-e6f6-4c31-9d7a-9bdc46b84581',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 242,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -1635,7 +1638,7 @@ const placeCards = [
   {
     'id': '9ed6b7b8-3321-4c49-8a6b-cdba4e312889',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 280,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -1658,7 +1661,7 @@ const placeCards = [
   {
     'id': 'f9d76370-51fd-41e4-a0bf-208cd59c59cf',
     'title': 'Loft Studio in the Central Area',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 292,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -1681,7 +1684,7 @@ const placeCards = [
   {
     'id': 'c4124e8b-3d79-4515-ba2e-359ba1a55632',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 280,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -1704,7 +1707,7 @@ const placeCards = [
   {
     'id': '3e4518a8-2597-42d0-a8d2-19c0d88e3628',
     'title': 'Loft Studio in the Central Area',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 444,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/5.jpg',
     'city': {
@@ -1727,7 +1730,7 @@ const placeCards = [
   {
     'id': '1559dd27-7f0c-44ba-85d8-7bd2fc3202b2',
     'title': 'House in countryside',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 155,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/16.jpg',
     'city': {
@@ -1750,7 +1753,7 @@ const placeCards = [
   {
     'id': '11ac2b98-a2d3-4779-9e33-8dd1cc313d2f',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 130,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/5.jpg',
     'city': {
@@ -1773,7 +1776,7 @@ const placeCards = [
   {
     'id': '86b6caec-cd1c-490b-aca1-81f51079f55f',
     'title': 'Wood and stone place',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 813,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -1796,7 +1799,7 @@ const placeCards = [
   {
     'id': 'e75eb083-0d27-4662-8031-cd89c2b39838',
     'title': 'The Joshua Tree House',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 322,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/10.jpg',
     'city': {
@@ -1819,7 +1822,7 @@ const placeCards = [
   {
     'id': '67150cbb-ebc1-44ab-97e8-aa463f9ba520',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 294,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -1842,7 +1845,7 @@ const placeCards = [
   {
     'id': '28efe0bf-3b96-4cf8-9aa8-4c4e0f29baab',
     'title': 'House in countryside',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 124,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -1865,7 +1868,7 @@ const placeCards = [
   {
     'id': '126fa928-e246-4a4e-9ffb-e4054d22a635',
     'title': 'The Joshua Tree House',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 183,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -1888,7 +1891,7 @@ const placeCards = [
   {
     'id': 'de7c3b6c-7079-4502-b350-8aa0e2fa4f02',
     'title': 'Canal View Prinsengracht',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 797,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -1911,7 +1914,7 @@ const placeCards = [
   {
     'id': '66138b69-f0dc-458b-978e-bc2b5f2301ba',
     'title': 'Canal View Prinsengracht',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 373,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/6.jpg',
     'city': {
@@ -1934,7 +1937,7 @@ const placeCards = [
   {
     'id': '2a7e957c-200b-4fe6-9363-389bd4959137',
     'title': 'House in countryside',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 465,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/20.jpg',
     'city': {
@@ -1957,7 +1960,7 @@ const placeCards = [
   {
     'id': 'd5d14471-7c18-4bb4-a7f2-2b22bbab115a',
     'title': 'The Joshua Tree House',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 724,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -1980,7 +1983,7 @@ const placeCards = [
   {
     'id': '8e0fead7-574b-47f0-92ac-078dd46779ce',
     'title': 'Canal View Prinsengracht',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 244,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -2003,7 +2006,7 @@ const placeCards = [
   {
     'id': 'addf6a49-f5eb-470b-9baf-b7fef78af541',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 125,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/5.jpg',
     'city': {
@@ -2026,7 +2029,7 @@ const placeCards = [
   {
     'id': 'e6613eca-2468-4fa5-90b0-76ec5f6d4918',
     'title': 'Wood and stone place',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 231,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -2049,7 +2052,7 @@ const placeCards = [
   {
     'id': '5eb8b0e8-84e1-4296-84f1-294cb289f230',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 409,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/2.jpg',
     'city': {
@@ -2072,7 +2075,7 @@ const placeCards = [
   {
     'id': 'e02e6318-f92b-4cbb-8f5b-3b834189ffbf',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 486,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/10.jpg',
     'city': {
@@ -2095,7 +2098,7 @@ const placeCards = [
   {
     'id': '2c689fb2-3835-4acf-8950-dd2e12b2b185',
     'title': 'The Joshua Tree House',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 278,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/6.jpg',
     'city': {
@@ -2118,7 +2121,7 @@ const placeCards = [
   {
     'id': '853d2762-d471-4757-b5df-e0981d01bbd0',
     'title': 'Tile House',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 231,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -2141,7 +2144,7 @@ const placeCards = [
   {
     'id': '19e6ce1f-7640-4ed2-a127-5d4698ffd5f6',
     'title': 'Loft Studio in the Central Area',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 201,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -2164,7 +2167,7 @@ const placeCards = [
   {
     'id': 'c1b1a5b8-8957-4170-81f7-92796d89219a',
     'title': 'Wood and stone place',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 819,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/12.jpg',
     'city': {
@@ -2187,7 +2190,7 @@ const placeCards = [
   {
     'id': '57351dd6-6445-47ef-a405-b1ee29b51b38',
     'title': 'Perfectly located Castro',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 660,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/13.jpg',
     'city': {
@@ -2210,7 +2213,7 @@ const placeCards = [
   {
     'id': '8b71c730-981c-4f94-bd92-22a2fb339c11',
     'title': 'Perfectly located Castro',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 452,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/3.jpg',
     'city': {
@@ -2233,7 +2236,7 @@ const placeCards = [
   {
     'id': '450d66a7-e633-4c73-9acd-aa50b3bf49ab',
     'title': 'Tile House',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 954,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -2256,7 +2259,7 @@ const placeCards = [
   {
     'id': '69c6741c-004c-4a16-8ccb-a91dc0d32762',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 163,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/20.jpg',
     'city': {
@@ -2279,7 +2282,7 @@ const placeCards = [
   {
     'id': 'ee23886d-af3e-464e-84b4-00d9ccf5f4f9',
     'title': 'Canal View Prinsengracht',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 140,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -2302,7 +2305,7 @@ const placeCards = [
   {
     'id': '32929359-9cae-48d9-a17d-75fe5159ea3d',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 301,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {
@@ -2325,7 +2328,7 @@ const placeCards = [
   {
     'id': 'dc0c1399-38b7-4bf6-b065-686a9e1d1414',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 826,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -2348,7 +2351,7 @@ const placeCards = [
   {
     'id': '6bbb4e02-492b-4ae3-a118-271b5d2a77ed',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 303,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -2371,7 +2374,7 @@ const placeCards = [
   {
     'id': 'fb58ed6f-3ecd-451d-83c2-35b4b0821241',
     'title': 'Perfectly located Castro',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 286,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/15.jpg',
     'city': {
@@ -2394,7 +2397,7 @@ const placeCards = [
   {
     'id': '84b0c9ef-dc39-4a8e-b0a1-76089619793a',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 483,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/9.jpg',
     'city': {
@@ -2417,7 +2420,7 @@ const placeCards = [
   {
     'id': 'deae383d-9b40-4ae2-96c5-4ef1dbd091a8',
     'title': 'Tile House',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 300,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -2440,7 +2443,7 @@ const placeCards = [
   {
     'id': '0d08767b-5595-4b96-8886-0f137c5831a6',
     'title': 'Loft Studio in the Central Area',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 230,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/6.jpg',
     'city': {
@@ -2463,7 +2466,7 @@ const placeCards = [
   {
     'id': '26017d12-79a9-4a60-806c-99ddbad5c702',
     'title': 'Wood and stone place',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 643,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/17.jpg',
     'city': {
@@ -2486,7 +2489,7 @@ const placeCards = [
   {
     'id': '6019f1ea-557e-4e0f-aad9-36c0fb50a4c5',
     'title': 'Beautiful & luxurious apartment at great location',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 297,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -2509,7 +2512,7 @@ const placeCards = [
   {
     'id': '66d1c80a-cdce-4969-9aac-1e1ecab85e1b',
     'title': 'Perfectly located Castro',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 422,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -2532,7 +2535,7 @@ const placeCards = [
   {
     'id': 'ced82f60-a3f4-4b7e-b8c0-7aad8e1d5ff9',
     'title': 'Wood and stone place',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 385,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/20.jpg',
     'city': {
@@ -2555,7 +2558,7 @@ const placeCards = [
   {
     'id': '0351d714-5cd1-4cb3-a9b0-986a613ba8bc',
     'title': 'Wood and stone place',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 279,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/8.jpg',
     'city': {
@@ -2578,7 +2581,7 @@ const placeCards = [
   {
     'id': 'e87b3b79-881e-4820-8cc0-2d165e77dfb2',
     'title': 'Nice, cozy, warm big bed apartment',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 769,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/12.jpg',
     'city': {
@@ -2601,7 +2604,7 @@ const placeCards = [
   {
     'id': '9de4464a-3d15-4edc-b282-92f125138520',
     'title': 'The Pondhouse - A Magical Place',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 331,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/7.jpg',
     'city': {
@@ -2624,7 +2627,7 @@ const placeCards = [
   {
     'id': '1447224d-944c-4ff7-b9fa-a9ba109bce3d',
     'title': 'Loft Studio in the Central Area',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 235,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/7.jpg',
     'city': {
@@ -2647,7 +2650,7 @@ const placeCards = [
   {
     'id': '5846ff8d-77b2-43db-9abd-01eb22550bb5',
     'title': 'Waterfront with extraordinary view',
-    'type': 'house',
+    'type': 'house' as unknown as Place,
     'price': 783,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/5.jpg',
     'city': {
@@ -2670,7 +2673,7 @@ const placeCards = [
   {
     'id': 'd205178b-3147-465a-90e6-ae0c33d2ff51',
     'title': 'Penthouse, 4-5 rooms + 5 balconies',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 263,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/14.jpg',
     'city': {
@@ -2693,7 +2696,7 @@ const placeCards = [
   {
     'id': 'f5fe6900-01ee-4440-9a69-e2e79f632058',
     'title': 'Amazing and Extremely Central Flat',
-    'type': 'hotel',
+    'type': 'hotel' as unknown as Place,
     'price': 493,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/20.jpg',
     'city': {
@@ -2716,7 +2719,7 @@ const placeCards = [
   {
     'id': '5115990a-a954-4998-b7da-8edf10753bc5',
     'title': 'The house among olive ',
-    'type': 'apartment',
+    'type': 'apartment' as unknown as Place,
     'price': 304,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/18.jpg',
     'city': {
@@ -2739,7 +2742,7 @@ const placeCards = [
   {
     'id': 'd287e093-bc57-4428-b765-d8dc6f20d88c',
     'title': 'Tile House',
-    'type': 'room',
+    'type': 'room' as unknown as Place,
     'price': 204,
     'previewImage': 'https://16.design.htmlacademy.pro/static/hotel/19.jpg',
     'city': {

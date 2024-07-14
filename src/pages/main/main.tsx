@@ -13,7 +13,7 @@ type MainProps = {
   sort: Sort;
 };
 const Main = (props: MainProps) => {
-  const cardMocks: PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards) as PlaceCard);
+  const cardMocks : PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards));
   return (
     <div className="page page--gray page--main">
       <Header />
