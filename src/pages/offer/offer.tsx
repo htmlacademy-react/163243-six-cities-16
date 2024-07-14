@@ -10,7 +10,7 @@ import { Offer as OfferType, PlaceCard } from '../../types';
 import {getRandomArrayElement} from '../../utils';
 
 const Offer = ():JSX.Element => {
-  const cardMocks: PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards) as PlaceCard);
+  const cardMocks: PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards));
   return (
     <div className="page">
       <Header />
