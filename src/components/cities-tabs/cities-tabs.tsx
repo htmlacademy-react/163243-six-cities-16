@@ -1,4 +1,4 @@
-import { City } from '../../const';
+import { City } from '../../types';
 
 type CitiesTabsProps = {
   cities: typeof City;

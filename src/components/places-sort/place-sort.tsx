@@ -1,14 +1,14 @@
-import { SortType } from '../../const';
+import { Sort } from '../../types';
 
 type PlacesSortProps = {
-  sortType: typeof SortType;
+  sort: Sort;
 };
 
-const SortTypeItem = ({ sortType }: { sortType: string }):JSX.Element => (
-  <li className="places__option places__option--active" tabIndex={0}>{sortType}</li>
+const SortTypeItem = ({ sort }: { sort: string }):JSX.Element => (
+  <li className="places__option places__option--active" tabIndex={0}>{sort}</li>
 );
 
-const PlacesSort = ({ sortType }: PlacesSortProps):JSX.Element => (
+const PlacesSort = ({ sort }: PlacesSortProps):JSX.Element => (
   <form className="places__sorting" action="#" method="get">
     <span className="places__sorting-caption">Sort by</span>
     <span className="places__sorting-type" tabIndex={0}>
@@ -18,8 +18,8 @@ const PlacesSort = ({ sortType }: PlacesSortProps):JSX.Element => (
       </svg>
     </span>
     <ul className="places__options places__options--custom places__options--opened">
-      {Object.values(sortType).map((sortTypeItem) => (
-        <SortTypeItem key={sortTypeItem} sortType={sortTypeItem} />
+      {Object.values(sort).map((sortTypeItem) => (
+        <SortTypeItem key={sortTypeItem} sort={sortTypeItem} />
       ))}
     </ul>
   </form>

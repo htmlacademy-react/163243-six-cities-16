@@ -1,16 +1,16 @@
 import Main from '../../pages/main/main';
-import { City, SortType } from '../../const';
+import { City, Sort } from '../../types';
 
 type AppProps = {
-  city: typeof City;
-  sortType: typeof SortType;
+  city: City;
+  sortType: Sort;
 };
 
-const App = ({ city, sortType }: AppProps):JSX.Element => (
+const App = (props: AppProps):JSX.Element => (
   <main>
     <Main
-      city={ city }
-      sortType={ sortType }
+      city={ props.city }
+      sort={ props.sortType }
     />
   </main>
 );

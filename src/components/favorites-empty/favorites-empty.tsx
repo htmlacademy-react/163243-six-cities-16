@@ -1,4 +1,4 @@
-const FavoritesEmpty = () => (
+const FavoritesEmpty = (): JSX.Element => (
   <section className="favorites favorites--empty">
     <h1 className="visually-hidden">Favorites (empty)</h1>
     <div className="favorites__status-wrapper">

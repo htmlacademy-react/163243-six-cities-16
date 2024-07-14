@@ -2,7 +2,7 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import FavoritesList from '../../components/favorites-list/favorites-list';
 
-const Favorites = () => (
+const Favorites = ():JSX.Element => (
   <div className="page">
     <Header />
     <main className="page__main page__main--favorites">

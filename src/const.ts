@@ -5,13 +5,27 @@ const City = {
   Amsterdam: 'Amsterdam',
   Hamburg: 'Hamburg',
   Dusseldorf: 'Dusseldorf',
-};
+} as const;
 
-const SortType = {
+const Sort = {
   Popular: 'Popular',
   PriceLowToHigh: 'Price: low to high',
   PriceHighToLow: 'Price: high to low',
   TopRatedFirst: 'Top rated first',
-};
+} as const;
 
-export { City, SortType };
+const Place = {
+  House: 'house',
+  Apartment: 'apartment',
+  Hotel: 'hotel',
+  Room: 'room'
+} as const;
+
+const PlaceCardAlt = {
+  Cities: 'cities',
+  NearPlace: 'near-places',
+  Favorites: 'favorites'
+
+} as const;
+
+export { City, Sort, Place, PlaceCardAlt };
