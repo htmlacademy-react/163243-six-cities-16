@@ -1,9 +1,13 @@
 import LoginForm from '../../components/login-form/login-form';
 import LoginLocation from '../../components/login-location/login-location';
 import Logo from '../../components/logo/logo';
+import {Helmet} from 'react-helmet-async';
 
 const Login = ():JSX.Element => (
   <div className="page page--gray page--login">
+    <Helmet>
+      <title>6 Cities. Sign in</title>
+    </Helmet>
     <header className="header">
       <div className="container">
         <div className="header__wrapper">

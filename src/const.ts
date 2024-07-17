@@ -35,4 +35,10 @@ enum AppRoute {
   Offer = '/offer/:id',
 }
 
-export { City, Sort, Place, PlaceCardAlt, AppRoute };
+enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}
+
+export { City, Sort, Place, PlaceCardAlt, AppRoute, AuthorizationStatus };

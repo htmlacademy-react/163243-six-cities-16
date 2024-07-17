@@ -7,6 +7,7 @@ import PlacesMap from '../../components/places-map/places-map';
 import PlacesList from '../../components/places-list/places-list';
 import { placeCards } from '../../mocks/place-cards';
 import { getRandomArrayElement } from '../../utils';
+import {Helmet} from 'react-helmet-async';
 
 type MainProps = {
   city: City;
@@ -18,6 +19,9 @@ const Main = (props: MainProps) => {
     <main>
       <div className="page page--gray page--main">
         <Header />
+        <Helmet>
+          <title>6 Cities. Book your trip</title>
+        </Helmet>
 
         <main className="page__main page__main--index">
           <h1 className="visually-hidden">Cities</h1>

@@ -4,7 +4,10 @@ import Favorites from '../../pages/favorites/favorites';
 import Offer from '../../pages/offer/offer';
 import { City, Sort } from '../../types';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AppRoute } from '../../const';
+import { AppRoute, AuthorizationStatus } from '../../const';
+import PrivateRoute from '../private-route/private-route';
+import {HelmetProvider} from 'react-helmet-async';
+import NotFound from '../../pages/not-found/not-found';
 
 type AppProps = {
   city: City;
@@ -12,31 +15,41 @@ type AppProps = {
 };
 
 const App = (props: AppProps):JSX.Element => (
-  <BrowserRouter>
-    <Routes>
-      <Route
-        path = { AppRoute.Main }
-        element = {
-          <Main
-            city={ props.city }
-            sort={ props.sortType }
-          />
-        }
-      />
-      <Route
-        path = { AppRoute.Login }
-        element = <Login/>
-      />
-      <Route
-        path = {AppRoute.Favorites}
-        element = <Favorites/>
-      />
-      <Route
-        path = {AppRoute.Offer}
-        element = <Offer/>
-      />
-    </Routes>
-  </BrowserRouter>
+  <HelmetProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path = { AppRoute.Main }
+          element = {
+            <Main
+              city={ props.city }
+              sort={ props.sortType }
+            />
+          }
+        />
+        <Route
+          path = { AppRoute.Login }
+          element = { <Login/> }
+        />
+        <Route
+          path = { AppRoute.Favorites }
+          element = {
+            <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+              <Favorites/>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path = { AppRoute.Offer }
+          element = { <Offer/> }
+        />
+        <Route
+          path="*"
+          element={ <NotFound /> }
+        />
+      </Routes>
+    </BrowserRouter>
+  </HelmetProvider>
 );
 
 export default App;
