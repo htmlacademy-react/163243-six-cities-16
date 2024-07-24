@@ -8,6 +8,7 @@ import { AppRoute, AuthorizationStatus } from '../../const';
 import PrivateRoute from '../private-route/private-route';
 import {HelmetProvider} from 'react-helmet-async';
 import NotFound from '../../pages/not-found/not-found';
+import { ScrollToTop } from '../../utils';
 
 type AppProps = {
   city: City;
@@ -17,6 +18,7 @@ type AppProps = {
 const App = (props: AppProps):JSX.Element => (
   <HelmetProvider>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route
           path = { AppRoute.Main }
