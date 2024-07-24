@@ -7,6 +7,7 @@ import PlacesMap from '../../components/places-map/places-map';
 import PlacesList from '../../components/places-list/places-list';
 import { placeCards } from '../../mocks/place-cards';
 import { getRandomArrayElement } from '../../utils';
+import {Helmet} from 'react-helmet-async';
 
 type MainProps = {
   city: City;
@@ -15,27 +16,32 @@ type MainProps = {
 const Main = (props: MainProps) => {
   const cardMocks : PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards));
   return (
-    <div className="page page--gray page--main">
-      <Header />
+    <main>
+      <div className="page page--gray page--main">
+        <Header />
+        <Helmet>
+          <title>6 Cities. Book your trip</title>
+        </Helmet>
 
-      <main className="page__main page__main--index">
-        <h1 className="visually-hidden">Cities</h1>
-        <CitiesTabs cities={props.city} />
-        <div className="cities">
-          <div className="cities__places-container container">
-            <section className="cities__places places">
-              <h2 className="visually-hidden">Places</h2>
-              <PlacesHeader />
-              <PlacesSort sort={props.sort} />
-              <PlacesList placeCards={cardMocks}/>
-            </section>
-            <div className="cities__right-section">
-              <PlacesMap />
+        <main className="page__main page__main--index">
+          <h1 className="visually-hidden">Cities</h1>
+          <CitiesTabs cities={props.city} />
+          <div className="cities">
+            <div className="cities__places-container container">
+              <section className="cities__places places">
+                <h2 className="visually-hidden">Places</h2>
+                <PlacesHeader />
+                <PlacesSort sort={props.sort} />
+                <PlacesList placeCards={cardMocks}/>
+              </section>
+              <div className="cities__right-section">
+                <PlacesMap />
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </main>
   );
 };
 export default Main;

@@ -22,5 +22,6 @@
     "forceConsistentCasingInFileNames": true,
   },
   "include": ["src", "vite.config.ts"],
+  "exclude": ["src/pages/404/404.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

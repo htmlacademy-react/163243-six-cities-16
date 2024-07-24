@@ -28,4 +28,17 @@ const PlaceCardAlt = {
 
 } as const;
 
-export { City, Sort, Place, PlaceCardAlt };
+enum AppRoute {
+  Main = '/',
+  Login = '/login',
+  Favorites = '/favorites',
+  Offer = '/offer/:id',
+}
+
+enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}
+
+export { City, Sort, Place, PlaceCardAlt, AppRoute, AuthorizationStatus };

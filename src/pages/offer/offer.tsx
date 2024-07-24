@@ -8,12 +8,16 @@ import { review } from '../../mocks/review';
 import { placeCards } from '../../mocks/place-cards';
 import { Offer as OfferType, PlaceCard } from '../../types';
 import {getRandomArrayElement} from '../../utils';
+import {Helmet} from 'react-helmet-async';
 
 const Offer = ():JSX.Element => {
   const cardMocks: PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards));
   return (
     <div className="page">
       <Header />
+      <Helmet>
+        <title>6 Cities. Offer</title>
+      </Helmet>
       <main className="page__main page__main--offer">
         <section className="offer">
           <OfferGallery offer={ offer as OfferType }/>
