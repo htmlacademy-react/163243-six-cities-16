@@ -29,12 +29,16 @@ const App = (props: AppProps):JSX.Element => (
         />
         <Route
           path = { AppRoute.Login }
-          element = { <Login/> }
+          element = {
+            <PrivateRoute authorizationStatus={ AuthorizationStatus.NoAuth } page={ AppRoute.Login }>
+              <Login/>
+            </PrivateRoute>
+          }
         />
         <Route
           path = { AppRoute.Favorites }
           element = {
-            <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+            <PrivateRoute authorizationStatus={ AuthorizationStatus.NoAuth } page={ AppRoute.Favorites }>
               <Favorites/>
             </PrivateRoute>
           }

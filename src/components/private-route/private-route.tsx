@@ -4,16 +4,17 @@ import {AppRoute, AuthorizationStatus} from '../../const';
 type PrivateRouteProps = {
   authorizationStatus: AuthorizationStatus;
   children: JSX.Element;
+  page: string;
 }
 
-function PrivateRoute({authorizationStatus, children}: PrivateRouteProps): JSX.Element {
-  // const {authorizationStatus, children, reverse} = props;
+function PrivateRoute({authorizationStatus, children, page}: PrivateRouteProps): JSX.Element {
 
-  return (
-    (authorizationStatus === AuthorizationStatus.Auth)
-      ? children
-      : <Navigate to={AppRoute.Login} />
-  );
+  switch (page) {
+    case AppRoute.Login:
+      return authorizationStatus === AuthorizationStatus.Auth ? <Navigate to={AppRoute.Favorites} /> : children;
+    default:
+      return authorizationStatus === AuthorizationStatus.Auth ? children : <Navigate to={AppRoute.Login} />;
+  }
 }
 
 export default PrivateRoute;
