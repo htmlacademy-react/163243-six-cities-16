@@ -1,6 +1,5 @@
-import React from 'react';
-
 import { Offer, Review } from '../../types';
+
 import ReviewsList from '../reviews-list/reviews-list';
 
 type OfferDetailsProps = {

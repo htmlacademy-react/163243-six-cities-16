@@ -1,6 +1,8 @@
-import PlaceCard from '../place-card/place-card';
-import { PlaceCards} from '../../types';
 import { PlaceCardAlt } from '../../const';
+
+import { PlaceCards} from '../../types';
+
+import PlaceCard from '../place-card/place-card';
 
 
 type PlacesListProps = {

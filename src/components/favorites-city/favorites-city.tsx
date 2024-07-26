@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const';
 
 import { PlaceCards } from '../../types';
-import PlaceCard from '../place-card/place-card';
 
 
 const FavoritesCityCards = ({cards}:{cards: PlaceCards}) => (

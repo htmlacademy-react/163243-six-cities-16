@@ -1,6 +1,9 @@
-import { PlaceCard as placeCardType} from '../../types';
-import PlaceCard from '../place-card/place-card';
 import { PlaceCardAlt } from '../../const';
+
+import { PlaceCard as placeCardType} from '../../types';
+
+import PlaceCard from '../place-card/place-card';
+
 
 type OfferNearPlacesProps = {
   placeCards: placeCardType[];

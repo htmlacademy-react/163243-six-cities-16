@@ -1,12 +1,14 @@
+import {Helmet} from 'react-helmet-async';
+
+import { City, Sort, PlaceCards } from '../../types';
+
 import Header from '../../components/header/header';
 import CitiesTabs from '../../components/cities-tabs/cities-tabs';
-import { City, Sort, PlaceCards } from '../../types';
 import PlacesHeader from '../../components/places-header/places-header';
 import PlacesSort from '../../components/places-sort/place-sort';
 import PlacesMap from '../../components/places-map/places-map';
 import PlacesList from '../../components/places-list/places-list';
-import {Helmet} from 'react-helmet-async';
-import React from 'react';
+
 
 type MainProps = {
   city: City;

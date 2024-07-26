@@ -1,5 +1,6 @@
-import { capitalizeLetter } from '../../utils';
 import { PlaceCard as placeCardType } from '../../types';
+
+import { capitalizeLetter } from '../../utils';
 
 type PlaceCardProps = {
   placeCard: placeCardType;
