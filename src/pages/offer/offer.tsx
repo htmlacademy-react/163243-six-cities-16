@@ -1,4 +1,5 @@
 import {Helmet} from 'react-helmet-async';
+// import { useLocation } from 'react-router-dom';
 
 import { Offer as OfferType, PlaceCard } from '../../types';
 
@@ -17,6 +18,7 @@ import { placeCards } from '../../mocks/place-cards';
 
 const Offer = ():JSX.Element => {
   const cardMocks: PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards));
+  // let location = useLocation();
   return (
     <div className="page">
       <Header />

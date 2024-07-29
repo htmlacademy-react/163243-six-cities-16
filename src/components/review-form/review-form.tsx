@@ -131,7 +131,7 @@ const ReviewForm = (): JSX.Element => {
         <button
           className="reviews__submit form__submit button"
           type="submit"
-          disabled={false}
+          disabled={!(formData.comment.length > 50 && formData.rating)}
         >
           Submit
         </button>
