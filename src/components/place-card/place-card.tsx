@@ -9,13 +9,13 @@ import { AppRoute } from '../../const';
 type PlaceCardProps = {
   placeCard: placeCardType;
   placeCardAlt: string;
-  onHoverHandler: (arg:string) => void;
+  mouseOverHandler: (arg:string) => void;
 };
 
 const PlaceCard = (props:PlaceCardProps):JSX.Element => (
   <article className=
     {`${props.placeCardAlt}__card place-card cities__card place-card`}
-  onMouseOver={() => props.onHoverHandler(props.placeCard.id)}
+  onMouseOver={() => props.mouseOverHandler(props.placeCard.id)}
   >
     { props.placeCard.isPremium && (
       <div className="place-card__mark">
