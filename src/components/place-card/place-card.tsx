@@ -1,15 +1,21 @@
+import { Link } from 'react-router-dom';
+
 import { PlaceCard as placeCardType } from '../../types';
 
 import { capitalizeLetter } from '../../utils';
+import { AppRoute } from '../../const';
+
 
 type PlaceCardProps = {
   placeCard: placeCardType;
   placeCardAlt: string;
+  onHoverHandler: (arg:string) => void;
 };
 
 const PlaceCard = (props:PlaceCardProps):JSX.Element => (
   <article className=
     {`${props.placeCardAlt}__card place-card cities__card place-card`}
+  onMouseOver={() => props.onHoverHandler(props.placeCard.id)}
   >
     { props.placeCard.isPremium && (
       <div className="place-card__mark">
@@ -19,14 +25,14 @@ const PlaceCard = (props:PlaceCardProps):JSX.Element => (
     <div className=
       {`${props.placeCardAlt}__image-wrapper place-card__image-wrapper`}
     >
-      <a href="#">
+      <Link to={`${AppRoute.Offer.split(':')[0]}${props.placeCard.id}`}>
         <img className="place-card__image"
           src={ props.placeCard.previewImage }
           width="260"
           height="200"
           alt="Place image"
         />
-      </a>
+      </Link>
     </div>
     <div className="place-card__info">
       <div className="place-card__price-wrapper">
@@ -55,7 +61,7 @@ const PlaceCard = (props:PlaceCardProps):JSX.Element => (
         </div>
       </div>
       <h2 className="place-card__name">
-        <a href="#">{ props.placeCard.title }</a>
+        <Link to={`${AppRoute.Offer.split(':')[0]}${props.placeCard.id}`}>{ props.placeCard.title }</Link>
       </h2>
       <p className="place-card__type">{ capitalizeLetter(props.placeCard.type as unknown as string) }</p>
     </div>

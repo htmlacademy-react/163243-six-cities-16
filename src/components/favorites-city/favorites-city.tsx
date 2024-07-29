@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { AppRoute } from '../../const';
 
-import { PlaceCards } from '../../types';
+import { PlaceCards, PlaceCard } from '../../types';
 
 
 const FavoritesCityCards = ({cards}:{cards: PlaceCards}) => (
@@ -67,18 +67,24 @@ type FavoritesCityProps = {
 
 const FavoritesCity = ({places}:FavoritesCityProps): JSX.Element => {
   const favorites = places.filter((place) => place.isFavorite);
-  const groupedFavorites = Object.groupBy(favorites, (v) => v['city']['name']);
-  // console.log('favorites', favorites);
-  // console.log(Object.groupBy(favorites, v => v['city']['name']));
+  const groupedFavorites = favorites.reduce<Record<string, PlaceCard[]>>((cardsByCity, card) => {
+    const cityName = card.city.name;
+    if (!cardsByCity[cityName]) {
+      cardsByCity[cityName] = [];
+    }
+    cardsByCity[cityName].push(card);
+    return cardsByCity;
+  }, {});
+
   return (
     <ul className="favorites__list">
       {Object.keys(groupedFavorites).map((city) => (
         <li key={city} className="favorites__locations-items">
           <div className="favorites__locations locations locations--current">
             <div className="locations__item">
-              <a className="locations__item-link" href="#">
+              <Link className="locations__item-link" to={ AppRoute.Main }>
                 <span>{city}</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="favorites__places">
