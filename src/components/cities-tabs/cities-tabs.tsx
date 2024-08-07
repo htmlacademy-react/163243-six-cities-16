@@ -1,7 +1,7 @@
 import { City } from '../../types';
 
 type CitiesTabsProps = {
-  cities: typeof City;
+  cities: City;
 };
 
 const CitiesTabItem = ({ city }: {city: string}):JSX.Element => (

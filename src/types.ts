@@ -1,17 +1,18 @@
+import PlaceCard from './components/place-card/place-card';
 import { City, Sort, Place, PlaceCardAlt } from './const';
 
-type City = typeof City;
-type Sort = typeof Sort;
-type Place = typeof Place;
-type PlaceCardAlt = typeof PlaceCardAlt;
+export type City = typeof City;
+export type Sort = typeof Sort;
+export type Place = typeof Place;
+export type PlaceCardAlt = typeof PlaceCardAlt;
 
-type Location = {
+export type Location = {
   latitude: number;
   longitude: number;
   zoom: number;
 }
 
-type PlaceCard = {
+export type PlaceCard = {
   id: string;
   title: string;
   type: Place;
@@ -27,13 +28,15 @@ type PlaceCard = {
   previewImage: string;
   }
 
-type User = {
+export type PlaceCards = PlaceCard[]
+
+export type User = {
   name: string;
   avatarUrl: string;
   isPro: boolean;
 }
 
-type Offer = {
+export type Offer = {
   id: string;
   title: string;
   type: string;
@@ -54,7 +57,9 @@ type Offer = {
   maxAdults: number;
 }
 
-type Review = {
+export type Offers = Offer[]
+
+export type Review = {
   id: string;
   date: string;
   user: User;
@@ -62,11 +67,9 @@ type Review = {
   rating: number;
 }
 
-export type {
-  City,
-  Sort,
-  PlaceCard,
-  Place,
-  Offer,
-  Review,
-  PlaceCardAlt};
+export type FormState = {
+  rating: string;
+  comment: string;
+}
+
+export type ActiveCard = string | undefined;

@@ -1,14 +1,23 @@
-import { capitalizeLetter } from '../../utils';
+import { Link, generatePath } from 'react-router-dom';
+
 import { PlaceCard as placeCardType } from '../../types';
+
+import { capitalizeLetter } from '../../utils';
+import { AppRoute } from '../../const';
+
 
 type PlaceCardProps = {
   placeCard: placeCardType;
   placeCardAlt: string;
+  onMouseEnter?: (arg:string) => void;
+  onMouseLeave?: (arg:string | undefined) => void;
 };
 
 const PlaceCard = (props:PlaceCardProps):JSX.Element => (
   <article className=
     {`${props.placeCardAlt}__card place-card cities__card place-card`}
+  onMouseEnter={props.onMouseEnter ? () => props.onMouseEnter!(props.placeCard.id) : undefined}
+  onMouseLeave={props.onMouseLeave ? () => props.onMouseLeave!(undefined) : undefined}
   >
     { props.placeCard.isPremium && (
       <div className="place-card__mark">
@@ -18,14 +27,14 @@ const PlaceCard = (props:PlaceCardProps):JSX.Element => (
     <div className=
       {`${props.placeCardAlt}__image-wrapper place-card__image-wrapper`}
     >
-      <a href="#">
+      <Link to={generatePath(AppRoute.Offer, { id: props.placeCard.id}) }>
         <img className="place-card__image"
           src={ props.placeCard.previewImage }
           width="260"
           height="200"
           alt="Place image"
         />
-      </a>
+      </Link>
     </div>
     <div className="place-card__info">
       <div className="place-card__price-wrapper">
@@ -54,7 +63,7 @@ const PlaceCard = (props:PlaceCardProps):JSX.Element => (
         </div>
       </div>
       <h2 className="place-card__name">
-        <a href="#">{ props.placeCard.title }</a>
+        <Link to={generatePath(AppRoute.Offer, { id: props.placeCard.id}) }></Link>
       </h2>
       <p className="place-card__type">{ capitalizeLetter(props.placeCard.type as unknown as string) }</p>
     </div>

@@ -41,4 +41,23 @@ enum AuthorizationStatus {
   Unknown = 'UNKNOWN',
 }
 
-export { City, Sort, Place, PlaceCardAlt, AppRoute, AuthorizationStatus };
+const Rating = [
+  {title:'perfect', stars: 5},
+  {title:'good', stars: 4},
+  {title:'not bad', stars: 3},
+  {title:'badly', stars: 2},
+  {title:'terribly', stars: 1}
+];
+
+const REVIEW_COMMENT_LIMIT = 50;
+
+export {
+  City,
+  Sort,
+  Place,
+  PlaceCardAlt,
+  AppRoute,
+  AuthorizationStatus,
+  REVIEW_COMMENT_LIMIT,
+  Rating
+};

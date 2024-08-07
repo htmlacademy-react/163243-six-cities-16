@@ -1,9 +1,17 @@
+import { Helmet } from 'react-helmet-async';
+
+import { PlaceCards } from '../../types';
+
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import FavoritesList from '../../components/favorites-list/favorites-list';
-import {Helmet} from 'react-helmet-async';
 
-const Favorites = ():JSX.Element => (
+
+type FavoritesProps = {
+  placeCards: PlaceCards;
+};
+
+const Favorites = ({placeCards}: FavoritesProps):JSX.Element => (
   <div className="page">
     <Header />
     <Helmet>
@@ -11,7 +19,7 @@ const Favorites = ():JSX.Element => (
     </Helmet>
     <main className="page__main page__main--favorites">
       <div className="page__favorites-container container">
-        <FavoritesList />
+        <FavoritesList places={ placeCards } />
       </div>
     </main>
     <Footer />

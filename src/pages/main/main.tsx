@@ -1,20 +1,23 @@
+import {Helmet} from 'react-helmet-async';
+import { useState } from 'react';
+
+import { City, Sort, PlaceCards, ActiveCard } from '../../types';
+
 import Header from '../../components/header/header';
 import CitiesTabs from '../../components/cities-tabs/cities-tabs';
-import { City, PlaceCard, Sort } from '../../types';
 import PlacesHeader from '../../components/places-header/places-header';
 import PlacesSort from '../../components/places-sort/place-sort';
 import PlacesMap from '../../components/places-map/places-map';
 import PlacesList from '../../components/places-list/places-list';
-import { placeCards } from '../../mocks/place-cards';
-import { getRandomArrayElement } from '../../utils';
-import {Helmet} from 'react-helmet-async';
+
 
 type MainProps = {
   city: City;
   sort: Sort;
+  placeCards: PlaceCards;
 };
 const Main = (props: MainProps) => {
-  const cardMocks : PlaceCard[] = Array.from({ length: 5 }, () => getRandomArrayElement(placeCards));
+  const [activeCard, setActiveCard] = useState<ActiveCard>(undefined);
   return (
     <main>
       <div className="page page--gray page--main">
@@ -32,10 +35,16 @@ const Main = (props: MainProps) => {
                 <h2 className="visually-hidden">Places</h2>
                 <PlacesHeader />
                 <PlacesSort sort={props.sort} />
-                <PlacesList placeCards={cardMocks}/>
+                <PlacesList
+                  placeCards={props.placeCards}
+                  onMouseEnter={setActiveCard}
+                  onMouseLeave={setActiveCard}
+                />
               </section>
               <div className="cities__right-section">
-                <PlacesMap />
+                <PlacesMap
+                  activeCard={activeCard}
+                />
               </div>
             </div>
           </div>
@@ -44,4 +53,5 @@ const Main = (props: MainProps) => {
     </main>
   );
 };
+
 export default Main;

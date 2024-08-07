@@ -1,6 +1,6 @@
-import { PlaceCard, Place } from '../types';
+import { PlaceCards, Place } from '../types';
 
-const placeCards: PlaceCard[] = [
+const placeCards: PlaceCards = [
 
   {
     'id': '6779022c-ac26-4554-ac2e-227dd6349161',
@@ -113,7 +113,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 2.375499,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 1.9
   },
@@ -228,7 +228,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 2.369499,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 2.4
   },
@@ -412,7 +412,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 2.364499,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 1.5
   },
@@ -435,7 +435,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 2.338499,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 2.3
   },
@@ -481,7 +481,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 6.961974,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 4.9
   },
@@ -734,7 +734,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 6.969974,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 3.1
   },
@@ -826,7 +826,7 @@ const placeCards: PlaceCard[] = [
       'longitude': 6.960974,
       'zoom': 16
     },
-    'isFavorite': false,
+    'isFavorite': true,
     'isPremium': true,
     'rating': 2.9
   },
