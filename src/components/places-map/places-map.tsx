@@ -1,5 +1,7 @@
+import { ActiveCard } from '../../types';
+
 type PlaceMapProps = {
-  activeCard: string;
+  activeCard: ActiveCard;
 };
 
 const PlacesMap = ({activeCard}: PlaceMapProps):JSX.Element => (

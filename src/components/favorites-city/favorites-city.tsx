@@ -8,10 +8,10 @@ import { PlaceCards, PlaceCard } from '../../types';
 const FavoritesCityCards = ({cards}:{cards: PlaceCards}) => (
   cards.map((card) => (
     <article key={card.id} className="favorites__card place-card">
-      {card.isPremium ?
+      {card.isPremium &&
         <div className="place-card__mark">
           <span>Premium</span>
-        </div> : ''}
+        </div> }
       <div className="favorites__image-wrapper place-card__image-wrapper">
         <Link to={ AppRoute.Offer }>
           <img
@@ -52,7 +52,7 @@ const FavoritesCityCards = ({cards}:{cards: PlaceCards}) => (
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">Nice, cozy, warm big bed apartment</a>
+          <Link to={AppRoute.Offer}>Nice, cozy, warm big bed apartment</Link>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>

@@ -1,7 +1,7 @@
 import {Helmet} from 'react-helmet-async';
 import { useState } from 'react';
 
-import { City, Sort, PlaceCards } from '../../types';
+import { City, Sort, PlaceCards, ActiveCard } from '../../types';
 
 import Header from '../../components/header/header';
 import CitiesTabs from '../../components/cities-tabs/cities-tabs';
@@ -17,7 +17,7 @@ type MainProps = {
   placeCards: PlaceCards;
 };
 const Main = (props: MainProps) => {
-  const [activeCard, setActiveCard] = useState(props.placeCards[0].id);
+  const [activeCard, setActiveCard] = useState<ActiveCard>(undefined);
   return (
     <main>
       <div className="page page--gray page--main">
@@ -37,7 +37,8 @@ const Main = (props: MainProps) => {
                 <PlacesSort sort={props.sort} />
                 <PlacesList
                   placeCards={props.placeCards}
-                  mouseOverHandler={setActiveCard}
+                  onMouseEnter={setActiveCard}
+                  onMouseLeave={setActiveCard}
                 />
               </section>
               <div className="cities__right-section">

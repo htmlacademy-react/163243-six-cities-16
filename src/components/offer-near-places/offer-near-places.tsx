@@ -21,7 +21,6 @@ const OfferNearPlaces = (props:OfferNearPlacesProps): JSX.Element => (
           key={placeCard.id}
           placeCard={placeCard}
           placeCardAlt={PlaceCardAlt.NearPlace}
-          mouseOverHandler={ () => {} }
         />
       ))}
     </div>

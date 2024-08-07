@@ -1,3 +1,4 @@
+import PlaceCard from './components/place-card/place-card';
 import { City, Sort, Place, PlaceCardAlt } from './const';
 
 export type City = typeof City;
@@ -66,3 +67,9 @@ export type Review = {
   rating: number;
 }
 
+export type FormState = {
+  rating: string;
+  comment: string;
+}
+
+export type ActiveCard = string | undefined;

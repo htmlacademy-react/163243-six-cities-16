@@ -11,7 +11,7 @@ import Favorites from '../../pages/favorites/favorites';
 import Offer from '../../pages/offer/offer';
 import NotFound from '../../pages/not-found/not-found';
 
-import { ScrollToTop } from '../../utils';
+import ScrollToTop from '../scroll-to-top/scroll-to-top';
 import PrivateRoute from '../private-route/private-route';
 
 
@@ -21,7 +21,7 @@ type AppProps = {
   placeCards: PlaceCards;
 };
 
-const App = (props: AppProps):JSX.Element => (
+const App = ({city, sortType, placeCards}: AppProps):JSX.Element => (
   <HelmetProvider>
     <BrowserRouter>
       <ScrollToTop />
@@ -30,9 +30,9 @@ const App = (props: AppProps):JSX.Element => (
           path = { AppRoute.Main }
           element = {
             <Main
-              city={ props.city }
-              sort={ props.sortType }
-              placeCards={ props.placeCards }
+              city={ city }
+              sort={ sortType }
+              placeCards={ placeCards }
             />
           }
         />
@@ -55,7 +55,7 @@ const App = (props: AppProps):JSX.Element => (
               page={ AppRoute.Favorites }
             >
               <Favorites
-                placeCards={ props.placeCards }
+                placeCards={ placeCards }
               />
             </PrivateRoute>
           }

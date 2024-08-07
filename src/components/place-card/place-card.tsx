@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, generatePath } from 'react-router-dom';
 
 import { PlaceCard as placeCardType } from '../../types';
 
@@ -9,13 +9,15 @@ import { AppRoute } from '../../const';
 type PlaceCardProps = {
   placeCard: placeCardType;
   placeCardAlt: string;
-  mouseOverHandler: (arg:string) => void;
+  onMouseEnter?: (arg:string) => void;
+  onMouseLeave?: (arg:string | undefined) => void;
 };
 
 const PlaceCard = (props:PlaceCardProps):JSX.Element => (
   <article className=
     {`${props.placeCardAlt}__card place-card cities__card place-card`}
-  onMouseOver={() => props.mouseOverHandler(props.placeCard.id)}
+  onMouseEnter={props.onMouseEnter ? () => props.onMouseEnter!(props.placeCard.id) : undefined}
+  onMouseLeave={props.onMouseLeave ? () => props.onMouseLeave!(undefined) : undefined}
   >
     { props.placeCard.isPremium && (
       <div className="place-card__mark">
@@ -25,7 +27,7 @@ const PlaceCard = (props:PlaceCardProps):JSX.Element => (
     <div className=
       {`${props.placeCardAlt}__image-wrapper place-card__image-wrapper`}
     >
-      <Link to={`${AppRoute.Offer.split(':')[0]}${props.placeCard.id}`}>
+      <Link to={generatePath(AppRoute.Offer, { id: props.placeCard.id}) }>
         <img className="place-card__image"
           src={ props.placeCard.previewImage }
           width="260"
@@ -61,7 +63,7 @@ const PlaceCard = (props:PlaceCardProps):JSX.Element => (
         </div>
       </div>
       <h2 className="place-card__name">
-        <Link to={`${AppRoute.Offer.split(':')[0]}${props.placeCard.id}`}>{ props.placeCard.title }</Link>
+        <Link to={generatePath(AppRoute.Offer, { id: props.placeCard.id}) }></Link>
       </h2>
       <p className="place-card__type">{ capitalizeLetter(props.placeCard.type as unknown as string) }</p>
     </div>
